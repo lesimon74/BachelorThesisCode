@@ -1,0 +1,33 @@
+# For 1t3r
+plt.figure()
+SetToZero = np.array([0, 1, 2, 96, 97, 98, 99, 100, 101, numAA-3, numAA-2, numAA-1])
+mobility[SetToZero] = 0
+plt.xlabel('AA No. from 0 to 197')
+plt.ylabel('Mobility')
+plt.plot(mobility)
+min = 0
+max = 5
+plt.vlines(24, min, max)
+plt.vlines(26, min, max)
+plt.vlines(27, min, max)
+plt.vlines(28, min, max)
+plt.vlines(29, min, max)
+plt.vlines(31, min, max)
+plt.vlines(47, min, max)
+plt.vlines(48, min, max)
+plt.vlines(49, min, max)
+plt.vlines(81, min, max)
+plt.vlines(83, min, max)
+plt.vlines(123, min, max)
+plt.vlines(125, min, max)
+plt.vlines(126, min, max)
+plt.vlines(127, min, max)
+plt.vlines(128, min, max)
+plt.vlines(130, min, max)
+plt.vlines(146, min, max)
+plt.vlines(147, min, max)
+plt.vlines(148, min, max)
+plt.vlines(180, min, max)
+plt.vlines(182, min, max)
+
+plt.savefig('1t3rReport5.png', dpi = 400, bbox_inches='tight')

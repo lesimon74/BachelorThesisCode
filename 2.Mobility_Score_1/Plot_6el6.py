@@ -1,0 +1,33 @@
+# For 6el6
+plt.figure()
+SetToZero = np.array([0, 1, 2, 244, 245, 246, 247, 248, 249, numAA-3, numAA-2, numAA-1])
+mobility[SetToZero] = 0
+plt.xlabel('AA No. from 0 to 259')
+plt.ylabel('Mobility')
+plt.plot(mobility)
+min = 0
+max = 5
+plt.vlines(11, min, max)
+plt.vlines(33, min, max)
+plt.vlines(34, min, max)
+plt.vlines(36, min, max)
+plt.vlines(37, min, max)
+plt.vlines(40, min, max)
+plt.vlines(44, min, max)
+plt.vlines(47, min, max)
+plt.vlines(71, min, max)
+plt.vlines(73, min, max)
+plt.vlines(74, min, max)
+plt.vlines(77, min, max)
+plt.vlines(78, min, max)
+plt.vlines(81, min, max)
+plt.vlines(93, min, max)
+plt.vlines(112, min, max)
+plt.vlines(116, min, max)
+plt.vlines(137, min, max)
+plt.vlines(205, min, max)
+plt.vlines(206, min, max)
+plt.vlines(209, min, max)
+
+plt.savefig('6el6ToChange.png', dpi = 400, bbox_inches='tight')
+plt.close()
