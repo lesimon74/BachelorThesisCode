@@ -1,12 +1,15 @@
 # For 1t3r
 plt.figure()
-SetToZero = np.array([0, 1, 2, 96, 97, 98, 99, 100, 101, numAA-3, numAA-2, numAA-1])
-mobility[SetToZero] = 0
-plt.xlabel('AA No. from 0 to 197')
-plt.ylabel('Mobility')
+#SetToZero = np.array([0, 1, 2, 96, 97, 98, 99, 100, 101, numAA-3, numAA-2, numAA-1])
+#mobility[SetToZero] = 0
+plt.xlabel('AA No. from 0 to 197', fontsize=18)
+plt.ylabel('Mobility [arb. unit]', fontsize=18)
 plt.plot(mobility)
+#plt.plot(mobility2)
+#plt.legend(['wasserstein distance', 'standard deviation of wasserstein distance'], loc='upper left')
+#plt.legend(['old fit', 'new fit'], loc='upper left')
 min = 0
-max = 5
+max = 1
 plt.vlines(24, min, max)
 plt.vlines(26, min, max)
 plt.vlines(27, min, max)
@@ -30,4 +33,33 @@ plt.vlines(148, min, max)
 plt.vlines(180, min, max)
 plt.vlines(182, min, max)
 
-plt.savefig('1t3rReport5.png', dpi = 400, bbox_inches='tight')
+mingreen = 0
+maxgreen = max/2
+# aas which move a lot:
+plt.vlines(36, mingreen, maxgreen, color="g")
+plt.vlines(37, mingreen, maxgreen, color="g")
+plt.vlines(38, mingreen, maxgreen, color="g")
+plt.vlines(39, mingreen, maxgreen, color="g")
+plt.vlines(40, mingreen, maxgreen, color="g")
+plt.vlines(41, mingreen, maxgreen, color="g")
+plt.vlines(14, mingreen, maxgreen, color="g")
+plt.vlines(15, mingreen, maxgreen, color="g")
+plt.vlines(16, mingreen, maxgreen, color="g")
+plt.vlines(78, mingreen, maxgreen, color="g")
+plt.vlines(79, mingreen, maxgreen, color="g")
+plt.vlines(80, mingreen, maxgreen, color="g")
+plt.vlines(81, mingreen, maxgreen, color="g")
+plt.vlines(36+99, mingreen, maxgreen, color="g")
+plt.vlines(37+99, mingreen, maxgreen, color="g")
+plt.vlines(38+99, mingreen, maxgreen, color="g")
+plt.vlines(39+99, mingreen, maxgreen, color="g")
+plt.vlines(40+99, mingreen, maxgreen, color="g")
+plt.vlines(41+99, mingreen, maxgreen, color="g")
+plt.vlines(48+99, mingreen, maxgreen, color="g")
+plt.vlines(49+99, mingreen, maxgreen, color="g")
+plt.vlines(50+99, mingreen, maxgreen, color="g")
+plt.vlines(51+99, mingreen, maxgreen, color="g")
+
+plt.savefig('1t3rNormal4Ver3.png', dpi = 400, bbox_inches='tight')
+
+plt.close()
