@@ -19,6 +19,14 @@ Moviness[SetToMean2] = np.mean(Moviness)
 #SetToMean3 = np.array([96, 97, 98, 99, 100, 101])
 #Moviness[SetToMean3] = np.mean(Moviness)
 
+# For 3hpq
+#SetToMean4 = np.array([211, 212, 213, 214, 215, 216])
+#Moviness[SetToMean4] = mean
+
+# For 1dba
+#SetToMean5 = np.array([213, 214, 215, 216, 217, 218, 219])
+#Moviness[SetToMean5] = mean
+
 # Norm with max = 1
 maxValue = 0
 for x in Moviness:
@@ -28,6 +36,9 @@ for y in range(0, numAA):
     Moviness[y] = Moviness[y] / maxValue
 
 # Calculate pearson correlation
-from scipy.stats.stats import pearsonr
-print(pearsonr(BindingSite, Moviness))
+#from scipy.stats.stats import pearsonr
+#print(pearsonr(BindingSite, Moviness))
+
+from sklearn.metrics import roc_auc_score
+print(roc_auc_score(BindingSite, Moviness))
 mobility = Moviness
